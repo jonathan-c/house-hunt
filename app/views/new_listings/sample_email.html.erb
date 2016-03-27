@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<%- if List.current%>
+	<%- if List.all != [] %>
  		<%- List.current.each do |house| %>
 			<%= house.print %><br>
 		<% end %> 
