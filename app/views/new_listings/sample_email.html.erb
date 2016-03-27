@@ -4,8 +4,10 @@
 	<title></title>
 </head>
 <body>
- 	<%- List.current.each do |house| %>
-		<%= house.print %><br>
-	<% end %> 
+	<%- if List.current%>
+ 		<%- List.current.each do |house| %>
+			<%= house.print %><br>
+		<% end %> 
+	<% end %>
 </body>
 </html>
