@@ -19,8 +19,6 @@ class List < ActiveRecord::Base
   end
 
   def self.notify_houses_added
-    if List.last.created_at.to_date == Date.current
-      NewListings.sample_email.deliver
-    end
+    NewListings.sample_email.deliver
   end
 end

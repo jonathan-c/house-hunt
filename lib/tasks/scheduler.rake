@@ -49,6 +49,9 @@ task :update => :environment do
 	save_page(suffolk) 
 	save_page(nassau)
 
-	List.last.destroy if List.last.houses == []
-	List.notify_houses_added
+	if List.last.houses == []
+		List.last.destroy 
+	else
+		List.notify_houses_added	
+	end
 end
