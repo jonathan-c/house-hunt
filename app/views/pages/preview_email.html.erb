@@ -4,8 +4,10 @@
 	<title></title>
 </head>
 <body>
- 	<%- List.current.each do |house| %>
-		<%= house.print %><br>
-	<% end %> 
+	<%- if List.all != [] %>
+ 		<%- List.current.each do |house| %>
+			<a href=<%= house.url%>><%= house.print %></a><br>
+		<% end %> 
+	<% end %>
 </body>
 </html>

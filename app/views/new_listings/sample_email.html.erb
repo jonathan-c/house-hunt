@@ -6,7 +6,7 @@
 <body>
 	<%- if List.all != [] %>
  		<%- List.current.each do |house| %>
-			<%= house.print %><br>
+			<a href=<%= house.url%>><%= house.print %></a><br>
 		<% end %> 
 	<% end %>
 </body>

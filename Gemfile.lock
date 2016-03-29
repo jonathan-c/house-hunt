@@ -37,9 +37,13 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.10.0)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.6.0)
     hike (1.2.3)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     journey (1.0.4)
     jquery-rails (3.1.4)
@@ -49,9 +53,21 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.7.2)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0.0)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mime-types (1.25.1)
     multi_json (1.11.2)
+    net-http-digest_auth (1.4)
+    net-http-persistent (2.9.4)
     nokogiri (1.5.5)
+    ntlm-http (0.1.1)
     pg (0.18.4)
     polyglot (0.3.5)
     rack (1.4.7)
@@ -98,6 +114,10 @@ GEM
     tzinfo (0.3.48)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    webrobots (0.1.2)
 
 PLATFORMS
   ruby
@@ -105,6 +125,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
+  mechanize
   nokogiri
   pg
   rails (= 3.2.18)
