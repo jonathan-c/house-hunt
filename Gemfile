@@ -8,6 +8,7 @@ gem 'rails', '3.2.22'
 
 gem 'nokogiri'
 gem 'mechanize'
+gem 'twilio-ruby'
 
 group :development do
 	gem 'sqlite3'

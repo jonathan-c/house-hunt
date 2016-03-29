@@ -30,7 +30,7 @@ task :update => :environment do
 		end
 
 		houses.each do |i|
-			house = House.find_by_number_and_street(i[:number], i[:street])
+			house = House.find_by_url(i[:url])
 			if !house 
 				house = House.create(
 		  				number: i[:number].to_i,
@@ -41,6 +41,7 @@ task :update => :environment do
 		  				url: i[:url]
 		  				)
 				HouseList.create(list_id: @list.id, house_id: house.id)
+				send_text("+15166582879", "New House Listed! #{house.url}") 
 			end
 		end
 	end
@@ -52,6 +53,6 @@ task :update => :environment do
 	if List.last.houses == []
 		List.last.destroy 
 	else
-		List.notify_houses_added	
+		List.notify_houses_added
 	end
 end
