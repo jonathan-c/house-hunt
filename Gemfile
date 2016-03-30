@@ -16,6 +16,7 @@ end
 
 group :production do 
 	gem 'pg'
+	gem 'test-unit', '~> 3.0'
 end
 
 

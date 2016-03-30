@@ -73,6 +73,7 @@ GEM
     ntlm-http (0.1.1)
     pg (0.18.4)
     polyglot (0.3.5)
+    power_assert (0.2.7)
     rack (1.4.7)
     rack-cache (1.6.1)
       rack (>= 0.4)
@@ -109,6 +110,8 @@ GEM
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.11)
+    test-unit (3.1.8)
+      power_assert
     thor (0.19.1)
     tilt (1.4.1)
     treetop (1.4.15)
@@ -138,6 +141,7 @@ DEPENDENCIES
   rails (= 3.2.22)
   sass-rails (~> 3.2.3)
   sqlite3
+  test-unit (~> 3.0)
   twilio-ruby
   uglifier (>= 1.0.3)
 
