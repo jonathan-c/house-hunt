@@ -5,8 +5,12 @@ require 'open-uri'
 desc "This task is called by the Heroku scheduler add-on"
 
 task :update => :environment do
-	nassau = "http://www.realtor.com/realestateandhomes-search/Nassau-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
-	suffolk = "http://www.realtor.com/realestateandhomes-search/Suffolk-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
+	
+	def url(city)
+		"http://www.realtor.com/realestateandhomes-search/#{city}/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
+	end
+	# nassau = "http://www.realtor.com/realestateandhomes-search/Nassau-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
+	# suffolk = "http://www.realtor.com/realestateandhomes-search/Suffolk-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
 	
 	@list = List.create
 
@@ -41,14 +45,18 @@ task :update => :environment do
 		  				url: i[:url]
 		  				)
 				HouseList.create(list_id: @list.id, house_id: house.id)
-				send_text("+15166582879", "New House Listed! #{house.url}") 
+				# send_text("+15166582879", "New House Listed! #{house.url}") 
 			end
 		end
 	end
 
 	
-	save_page(suffolk) 
-	save_page(nassau)
+	save_page(url("Suffolk-County_NY")) 
+	save_page(url("Nassau-County_NY"))
+	save_page(url("Jersey-City_NJ"))
+	save_page(url("Queens_NY"))
+	save_page(url("Brooklyn_NY"))
+	save_page(url("Manhattan_NY"))
 
 	if List.last.houses == []
 		List.last.destroy 
