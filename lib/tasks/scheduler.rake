@@ -36,16 +36,18 @@ task :update => :environment do
 		houses.each do |i|
 			house = House.find_by_url(i[:url])
 			if !house 
-				house = House.create(
-		  				number: i[:number].to_i,
-		  				street: i[:street],
-		  				city: i[:city],
-		  				state: i[:state],
-		  				zip: i[:zip].to_i,
-		  				url: i[:url]
-		  				)
-				HouseList.create(list_id: @list.id, house_id: house.id)
-				send_text("+15166582879", "New House Listed! #{house.url}") 
+				if (i[:number] != 48 && i[:street] != "Grace St") && !i[:url].include?("Brooklyn_NY_11234_M42259-00115")
+					house = House.create(
+			  				number: i[:number].to_i,
+			  				street: i[:street],
+			  				city: i[:city],
+			  				state: i[:state],
+			  				zip: i[:zip].to_i,
+			  				url: i[:url]
+			  				)
+					HouseList.create(list_id: @list.id, house_id: house.id)
+					send_text("+15166582879", "New House Listed! #{house.url}") 
+				end
 			end
 		end
 	end
