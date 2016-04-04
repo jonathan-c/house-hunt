@@ -36,7 +36,7 @@ task :update => :environment do
 		houses.each do |i|
 			house = House.find_by_url(i[:url])
 			if !house 
-				if (i[:number] != 48 && i[:street] != "Grace St") && !i[:url].include?("Brooklyn_NY_11234_M42259-00115")
+				if (i[:number] != 48 && i[:street] != "Grace St") && !i[:url].include?("Brooklyn_NY_11234_M42259-00115") && !i[:url].include?("Brooklyn_NY_11208_M40395-78686")
 					house = House.create(
 			  				number: i[:number].to_i,
 			  				street: i[:street],
