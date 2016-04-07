@@ -62,6 +62,7 @@ task :update => :environment do
 	save_page(url("Guttenberg_NJ"))
 	save_page(url("Maplewood_NJ"))
 	save_page(url("Westwood_NJ"))
+	save_page(url("Weehawken_NJ"))
 	save_page(url("Queens_NY"))
 	save_page(url("Brooklyn_NY"))
 	save_page(url("Manhattan_NY"))
