@@ -7,7 +7,7 @@ HouseHunt::Application.initialize!
 def send_text(to, body)
 	@client = Twilio::REST::Client.new
   	@client.account.messages.create(
-		:from => "+16314985508",
+		:from => "+1<areacode><number>",
 	  	:to => to,
 	  	:body => body
   	)
