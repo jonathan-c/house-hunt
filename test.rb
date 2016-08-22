@@ -35,7 +35,7 @@ def save_page(url)
 		  				url: i[:url]
 		  				)
 				HouseList.create(list_id: @list.id, house_id: house.id)
-				#send_text("+15166582879", "New House Listed! #{house.url}") 
+				#send_text("+1<area code><number>", "New House Listed! #{house.url}") 
 			end
 		end
 	end

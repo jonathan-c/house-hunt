@@ -71,8 +71,8 @@ HouseHunt::Application.configure do
   config.action_mailer.smtp_settings = {
    :address              => "smtp.gmail.com",
    :port                 => 587,
-   :user_name            => "joncastillo123@gmail.com",
-   :password             => "jonjon89",
+   :user_name            => "",
+   :password             => "",
    :authentication       => "plain",
    :enable_starttls_auto => true
    }

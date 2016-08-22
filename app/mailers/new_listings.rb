@@ -1,7 +1,7 @@
 class NewListings < ActionMailer::Base
-  default from: "joncastillo123@gmail.com"
+  default from: ""
 
   def sample_email
-    mail(to: "askcastillo@gmail.com", subject: 'New Listings!')
+    mail(to: "", subject: 'New Listings!')
   end
 end
