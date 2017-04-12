@@ -1,5 +1,5 @@
 def url(city)
-	"http://www.realtor.com/realestateandhomes-search/#{city}/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
+	"http://www.realtor.com/realestateandhomes-search/#{city}/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
 end
 # nassau = "http://www.realtor.com/realestateandhomes-search/Nassau-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
 # suffolk = "http://www.realtor.com/realestateandhomes-search/Suffolk-County_NY/beds-4/type-multi-family-home/price-na-751000/shw-nl?pgsz=50"
